@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+html, body{
+
+height: 100%;
+width: 100%;
+
+}
+#main img{
+    padding-right: 2vw;
+    
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgb(31, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+
+.navbar a:hover::before {
+width: 100%;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+
+#cursor{
+    height: 150px;
+    width: 150px;
+    background-color: grey;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+#page1{
+min-height: 100vh;
+position: relative;
+width: 100%;
+padding: 0 1vw;
+padding-top: 9vh;
+background-color: black;
+
+
+}
+
+#page1 h1 {
+    
+    font-size: 13vw;
+    text-transform: uppercase;
+    line-height: 13vw;
+    letter-spacing: -10px; 
+    
+}
+p{
+    font-size: 15px;
+    margin: 10vw;
+    background-color: rgb(43, 34, 34);
+    
+    
+    
+}
+#page1 img{
+    min-height: 80vh;
+    margin-bottom: 25vw;
+    
+}
+
+
+
+#video-container{
+    height: 98vh;
+    width: 100%;
+    background-color: black;
+    margin-top: 23vw;
+    position: relative;
+    
+}
+
+#video-container video{
+    height: 100%;
+    
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+    background-color:rgb(255, 252, 252);
+}
+
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /*background-color: red;*/
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+    
+}
+
+#page2 .elem .dets{
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: black;
+    text-align: center;
+    padding-top: 8px;
+    
+    
+}
+
+#page2 .elem .dets:hover{
+    height: 100px;
+    background-color: rgb(79, 79, 82);
+    
+    
+}
+
+#page2 h2{
+    font-size: 3vh;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.child{
+    height: 55vh;
+    width: 38vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    height: 100%;
+
+}
+
+.child a{
+    font-size: 20px;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+}
+
+
+@media (max-width:600px) {
+    
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+          }
+
+    #page1 h1{
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+        }
+
+    #video-container{
+            height: 25vh;
+            margin-top: 3vw;
+            }
+
+    #video-container #play{
+            padding: 9.5vw 7.2vw;
+            font-size: 4.5vw;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            opacity: 1;
+            scale: 1;
+            transform: translate(-50%,-50%);
+            } 
+
+            #page2{
+                min-height: 100vh;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 5vw 3vw;
+                justify-content: space-between;
+            }
+
+            #page2 .elem{
+                height: 100vh;
+                width: 100%;
+                /*background-color: red;*/
+                overflow: hidden;
+                margin-bottom: 3vw;
+            }                            
+}
+hr.new1 {
+    width: 250px;
+    height: 5px;
+    border: 5px dotted rgb(0, 0, 0);
+    border-radius: 25px;
+    background-color: black;
+    display: block;
+    margin-left: 90vh;
+    opacity: 1;
+  }
